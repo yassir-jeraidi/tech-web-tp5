@@ -1,0 +1,60 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+}
+
+.logo-container {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+mat-nav-list {
+  padding-top: 8px;
+}
+
+mat-list-item {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 48px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e9ecef;
+  }
+
+  &.active {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+}
+
+mat-icon {
+  margin-right: 16px;
+}
+
+.nav-text {
+  flex: 1;
+}
+
+mat-toolbar {
+  background-color: #e3f2fd;
+  color: #000;
+}
+
+.content {
+  padding: 16px;
+  height: calc(100vh - 64px); /* Adjust for toolbar height */
+  overflow: auto;
+}

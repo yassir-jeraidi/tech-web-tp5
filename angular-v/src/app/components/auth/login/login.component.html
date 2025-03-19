@@ -1,0 +1,49 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <img src="/app/assets/images/logo.png" alt="app logo" >
+    </mat-card-header>
+    <mat-card-content>
+      <div class="alert" *ngIf="errorMessage">{{ errorMessage }}</div>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput
+                 placeholder="Enter your email"
+                 formControlName="email"
+                 required>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+            Email is required
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+            Email format not valid
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput
+                 type="password"
+                 formControlName="password"
+                 required>
+          <button mat-icon-button matSuffix>
+          </button>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+
+        <div class="button-container">
+          <button mat-raised-button
+                  type="submit"
+                  [disabled]="loginForm.invalid">
+            Sign in
+          </button>
+        </div>
+      </form>
+      <div class="redirect-link">
+        <a routerLink="/register">New user ? click to sign up !!</a>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
