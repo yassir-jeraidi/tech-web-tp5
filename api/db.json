@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "password": "Passw0rd123!"
+    },
+    {
+      "id": "u2",
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "password": "SecureP@ss456"
+    },
+    {
+      "id": "u3",
+      "name": "Clara Martinez",
+      "email": "clara.martinez@example.com",
+      "password": "Cl@ra789!"
+    },
+    {
+      "id": "u4",
+      "name": "David Lee",
+      "email": "david.lee@example.com",
+      "password": "D@v1d101112"
+    },
+    {
+      "id": "u5",
+      "name": "Emma Brown",
+      "email": "emma.brown@example.com",
+      "password": "Emm@2023#"
+    },
+    {
+      "id": "c821",
+      "name": "yassir",
+      "email": "yassir@gmail.com",
+      "password": "password"
+    }
+  ]
+}
