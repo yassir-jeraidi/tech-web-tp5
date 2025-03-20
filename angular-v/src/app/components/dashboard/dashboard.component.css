@@ -41,11 +41,19 @@ mat-list-item {
 }
 
 mat-icon {
-  margin-right: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+mat-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: middle;
 }
 
 .nav-text {
-  flex: 1;
+  vertical-align: middle;
 }
 
 mat-toolbar {
@@ -55,6 +63,6 @@ mat-toolbar {
 
 .content {
   padding: 16px;
-  height: calc(100vh - 64px); /* Adjust for toolbar height */
+  height: calc(100vh - 64px);
   overflow: auto;
 }

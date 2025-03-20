@@ -6,6 +6,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
+import {AuthService} from '../auth/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -25,6 +26,8 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class DashboardComponent {
   isSidenavOpen = true;
+
+  constructor(protected authService : AuthService) {}
 
   toggleSidenav(): void {
     this.isSidenavOpen = !this.isSidenavOpen;
