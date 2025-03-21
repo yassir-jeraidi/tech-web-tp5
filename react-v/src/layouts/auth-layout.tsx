@@ -1,5 +1,5 @@
 import {Outlet, useNavigate} from "react-router-dom";
-import {authService} from "../services/authService.ts";
+import {authService} from "@/services/authService.ts";
 import {useEffect} from "react";
 
 export default function AuthLayout() {

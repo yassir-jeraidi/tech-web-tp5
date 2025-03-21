@@ -11,6 +11,10 @@ export const loadUserFromSession = (): User | null => {
   return storedUser ? JSON.parse(storedUser) as User : null;
 }
 
+export const removeUserFromSession = () => {
+  sessionStorage.removeItem("user");
+}
+
 export const saveUserToSession = (user: User): User  => {
   sessionStorage.setItem('user', JSON.stringify(user));
   return user

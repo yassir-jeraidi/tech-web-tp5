@@ -1,7 +1,7 @@
 import {API_URL} from "@/constants";
 import {toast} from "sonner";
-import {LoginRequest, RegisterRequest, User} from "../types";
-import {loadUserFromSession, saveUserToSession} from "../lib/utils.ts";
+import {LoginRequest, RegisterRequest, User} from "@/types";
+import {loadUserFromSession, removeUserFromSession, saveUserToSession} from "@/lib/utils.ts";
 
 
 export const authService = {
@@ -17,7 +17,7 @@ export const authService = {
             return false;
         }
         saveUserToSession(data[0]);
-        toast.success("You logged in successfully!");
+        toast.success("You signed in successfully!");
         return true;
     },
     register: async (credentials: RegisterRequest): Promise<boolean> => {
@@ -26,17 +26,18 @@ export const authService = {
             body: JSON.stringify(credentials),
         })
         if (response.ok) {
-            toast.success("You are registered successfully!");
+            toast.success("You are signed up successfully!");
             saveUserToSession(credentials as User);
             return true;
         }
         toast.error("Something went wrong!");
         return false;
     },
+    logout: async (): Promise<boolean> => {
+        removeUserFromSession()
+        return true
+    },
     isAuthenticated: (): boolean => {
         return !!loadUserFromSession()
     },
-    getAuthenticatedUser: (): User | null => {
-        return loadUserFromSession()
-    }
 };

@@ -1,7 +1,8 @@
 import {createBrowserRouter} from "react-router-dom";
 import AuthLayout from "@/layouts/auth-layout.tsx";
-import SignInForm from "../components/sign-in-form.tsx";
-import AdminLayout from "../layouts/admin-layout.tsx";
+import AdminLayout from "@/layouts/admin-layout.tsx";
+import SignInForm from "@/components/sign-in-form.tsx";
+import SignUpForm from "@/components/sign-up-form.tsx";
 
 const router = createBrowserRouter(
     [
@@ -15,7 +16,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: '/sign-up',
-                    element: <SignInForm/>
+                    element: <SignUpForm/>
                 },
                 {
                     path: "/dashboard",

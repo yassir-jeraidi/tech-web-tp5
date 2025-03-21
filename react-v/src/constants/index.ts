@@ -1,10 +1,10 @@
 import {Field, LoginRequest} from "@/types";
 
-export const LOGIN_FIELDS: Field[] = [
+export const SIGN_IN_FIELDS: Field[] = [
     {
         id : 1,
         name : 'email',
-        type : 'text',
+        type : 'email',
         description : "Enter your email",
         placeholder : "Enter your email",
         label : "Email",
@@ -21,10 +21,32 @@ export const LOGIN_FIELDS: Field[] = [
     },
 ]
 
-export const LOGIN_DEFAULT_VALUES: LoginRequest = [
+export const SIGN_UP_FIELDS: Field[] = [
+    {
+        id : 3,
+        name : 'name',
+        type : 'text',
+        description : "Enter your name",
+        placeholder : "Enter your name",
+        label : "Name",
+        required: true,
+    },
+    ...SIGN_IN_FIELDS
+]
+
+export const SIGN_IN_DEFAULT_VALUES: LoginRequest = [
     {
         email : "",
         password : ""
+    }
+]
+
+
+export const SIGN_UP_DEFAULT_VALUES: LoginRequest = [
+    {
+        name : "",
+        email : "",
+        password : "",
     }
 ]
 

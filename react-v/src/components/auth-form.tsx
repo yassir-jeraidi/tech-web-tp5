@@ -15,7 +15,7 @@ import {z} from "zod";
 import {Field} from "@/types";
 import {schemas} from "@/lib/zod/schemas";
 import {useNavigate} from "react-router-dom";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/card.tsx";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card.tsx";
 import logo from "@/assets/images/logo.png";
 
 type SchemaName = keyof typeof schemas;
