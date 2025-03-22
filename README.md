@@ -2,6 +2,11 @@
 
 This repository contains two implementations of the same application using different frontend frameworks: Angular and React. Both versions interact with the same backend API.
 
+## Demo
+
+https://github.com/user-attachments/assets/828b3ae5-69d0-42b9-8e00-d85477501a9e
+
+
 ## Project Structure
 
 ```plaintext
